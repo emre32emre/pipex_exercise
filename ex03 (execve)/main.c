@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+
+//grep -o "*" test.txt | wc -l
 int main()
 {
 	//okunacak dosya adı

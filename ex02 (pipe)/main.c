@@ -21,12 +21,16 @@ int main() {
 	pipe(fd);
 	
 	// hata kontrolü
-	if((childpid = fork()) == -1) {
+	childpid = fork();
+	if(childpid == -1) 
+	{
 		perror("fork işlemi başarısız!");
 		exit(1);
 	}
-	
-	if(childpid == 0) {
+	// 0 okuma 1 yazma ucu 
+
+	if(childpid == 0) 
+	{
 		// child procress
 		// kanalın giriş tarafını kapat
 		close(fd[0]);
